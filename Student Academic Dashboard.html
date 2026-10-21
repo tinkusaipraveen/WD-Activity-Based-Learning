@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Academic Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 230px;
+            height: 100vh;
+            background-color: #243447;
+            color: white;
+            position: fixed;
+            padding: 25px 15px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #5dade2;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            margin: 8px 0;
+            border-radius: 6px;
+        }
+
+        .sidebar a:hover {
+            background-color: #3498db;
+        }
+
+        /* Main Content */
+        .main {
+            margin-left: 230px;
+            padding: 25px;
+        }
+
+        header {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+
+        header h1 {
+            color: #243447;
+            margin-bottom: 8px;
+        }
+
+        /* Student Details */
+        .student {
+            background-color: #d6eaf8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .student h2 {
+            margin-bottom: 15px;
+            color: #154360;
+        }
+
+        .student p {
+            margin: 8px 0;
+        }
+
+        /* Dashboard Cards */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 22px;
+            border-radius: 10px;
+            flex: 1 1 180px;
+            box-shadow: 0 2px 8px #ddd;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #566573;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2874a6;
+        }
+
+        /* Sections */
+        section {
+            background-color: white;
+            padding: 22px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+
+        section h2 {
+            color: #243447;
+            margin-bottom: 18px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 13px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2874a6;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f6fa;
+        }
+
+        /* Attendance Progress Bars */
+        .progress {
+            width: 100%;
+            height: 18px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 8px 0 18px;
+        }
+
+        .bar {
+            height: 100%;
+            background-color: #2ecc71;
+            border-radius: 10px;
+        }
+
+        .blue {
+            background-color: #3498db;
+        }
+
+        .orange {
+            background-color: #f39c12;
+        }
+
+        /* Announcements */
+        .announcement {
+            background-color: #eaf2f8;
+            padding: 15px;
+            margin: 12px 0;
+            border-left: 5px solid #3498db;
+            border-radius: 5px;
+        }
+
+        .announcement h3 {
+            margin-bottom: 8px;
+            color: #154360;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #566573;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .sidebar h2 {
+                margin-bottom: 15px;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                padding: 10px;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 15px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            section {
+                overflow-x: auto;
+            }
+
+            table {
+                min-width: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Student Portal</h2>
+
+        <a href="#dashboard">Dashboard</a>
+        <a href="#student">Student Details</a>
+        <a href="#results">Semester Results</a>
+        <a href="#attendance">Attendance</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#exams">Exam Schedule</a>
+        <a href="#announcements">Announcements</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <header id="dashboard">
+            <h1>Student Academic Dashboard</h1>
+            <p>Welcome back, Lahari! View your academic information here.</p>
+        </header>
+
+        <!-- Student Details -->
+        <div class="student" id="student">
+            <h2>Student Details</h2>
+            <p><b>Name:</b> Lahari Munagala</p>
+            <p><b>Roll Number:</b> 24CSE101</p>
+            <p><b>Branch:</b> Computer Science Engineering</p>
+            <p><b>Semester:</b> First Year</p>
+            <p><b>University:</b> DR.RVR NRI University</p>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="cards">
+
+            <div class="card">
+                <h3>Overall Attendance</h3>
+                <p>92%</p>
+            </div>
+
+            <div class="card">
+                <h3>Current CGPA</h3>
+                <p>8.7</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Subjects</h3>
+                <p>6</p>
+            </div>
+
+            <div class="card">
+                <h3>Assignments</h3>
+                <p>8/10</p>
+            </div>
+
+        </div>
+
+        <!-- Semester Results -->
+        <section id="results">
+            <h2>Semester Results</h2>
+
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                </tr>
+
+                <tr>
+                    <td>Mathematics</td>
+                    <td>92</td>
+                    <td>A+</td>
+                </tr>
+
+                <tr>
+                    <td>Physics</td>
+                    <td>85</td>
+                    <td>A</td>
+                </tr>
+
+                <tr>
+                    <td>Programming in C</td>
+                    <td>95</td>
+                    <td>A+</td>
+                </tr>
+
+                <tr>
+                    <td>English</td>
+                    <td>88</td>
+                    <td>A</td>
+                </tr>
+
+                <tr>
+                    <td>Engineering Graphics</td>
+                    <td>82</td>
+                    <td>A</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Attendance -->
+        <section id="attendance">
+            <h2>Attendance Overview</h2>
+
+            <p>Mathematics - 90%</p>
+            <div class="progress">
+                <div class="bar" style="width: 90%;"></div>
+            </div>
+
+            <p>Physics - 85%</p>
+            <div class="progress">
+                <div class="bar blue" style="width: 85%;"></div>
+            </div>
+
+            <p>Programming in C - 95%</p>
+            <div class="progress">
+                <div class="bar" style="width: 95%;"></div>
+            </div>
+
+            <p>English - 75%</p>
+            <div class="progress">
+                <div class="bar orange" style="width: 75%;"></div>
+            </div>
+        </section>
+
+        <!-- Subjects -->
+        <section id="subjects">
+            <h2>Subject Information</h2>
+
+            <table>
+                <tr>
+                    <th>Subject Code</th>
+                    <th>Subject Name</th>
+                    <th>Faculty</th>
+                </tr>
+
+                <tr>
+                    <td>CS101</td>
+                    <td>Programming in C</td>
+                    <td>Mr. Kumar</td>
+                </tr>
+
+                <tr>
+                    <td>MA101</td>
+                    <td>Mathematics</td>
+                    <td>Mrs. Priya</td>
+                </tr>
+
+                <tr>
+                    <td>PH101</td>
+                    <td>Physics</td>
+                    <td>Mr. Ravi</td>
+                </tr>
+
+                <tr>
+                    <td>EN101</td>
+                    <td>English</td>
+                    <td>Mrs. Sita</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Examination Schedule -->
+        <section id="exams">
+            <h2>Examination Schedule</h2>
+
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+
+                <tr>
+                    <td>Mathematics</td>
+                    <td>10-11-2026</td>
+                    <td>9:30 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Physics</td>
+                    <td>12-11-2026</td>
+                    <td>9:30 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Programming in C</td>
+                    <td>15-11-2026</td>
+                    <td>9:30 AM</td>
+                </tr>
+
+                <tr>
+                    <td>English</td>
+                    <td>18-11-2026</td>
+                    <td>9:30 AM</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Announcements -->
+        <section id="announcements">
+            <h2>Announcements</h2>
+
+            <div class="announcement">
+                <h3>Examination Notice</h3>
+                <p>Semester examinations are scheduled for November 2026.</p>
+            </div>
+
+            <div class="announcement">
+                <h3>Assignment Submission</h3>
+                <p>Submit pending assignments before the deadline.</p>
+            </div>
+
+            <div class="announcement">
+                <h3>College Event</h3>
+                <p>Students are invited to participate in upcoming college events.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Student Academic Dashboard</p>
+            <p>Designed using HTML and CSS only.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

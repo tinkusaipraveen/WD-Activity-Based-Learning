@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Information Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #154360;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #21618c;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f7dc6f;
+        }
+
+        section {
+            padding: 25px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #154360;
+            text-align: center;
+        }
+
+        .banner {
+            background-color: #d6eaf8;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .banner h2 {
+            font-size: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #154360;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #3498db;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .card {
+            background-color: #ebf5fb;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1 1 200px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background-color: #154360;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            section {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .banner h2 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>DR.RVR NRI UNIVERSITY</h1>
+        <p>Knowledge | Innovation | Excellence</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#departments">Departments</a>
+        <a href="#courses">Courses</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="banner">
+        <h2>Welcome to Our University</h2>
+        <p>Building Bright Futures Through Quality Education</p>
+        <a href="#admissions" class="button">Explore Admissions</a>
+    </section>
+
+    <section id="about">
+        <h2>About Our University</h2>
+        <p>Our university focuses on academic excellence, technical
+        knowledge, innovation, and the overall development of students.</p>
+    </section>
+
+    <section id="departments">
+        <h2>Our Departments</h2>
+
+        <div class="container">
+            <div class="card">
+                <h3>Computer Science</h3>
+                <p>Programming, software development, and AI.</p>
+            </div>
+
+            <div class="card">
+                <h3>Electronics</h3>
+                <p>Electronic systems and communication technologies.</p>
+            </div>
+
+            <div class="card">
+                <h3>Mechanical</h3>
+                <p>Machine design and manufacturing technologies.</p>
+            </div>
+
+            <div class="card">
+                <h3>Civil Engineering</h3>
+                <p>Construction, structures, and infrastructure.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h2>Courses Offered</h2>
+        <div class="container">
+            <div class="card">
+                <h3>B.Tech</h3>
+                <p>Bachelor of Technology</p>
+            </div>
+
+            <div class="card">
+                <h3>M.Tech</h3>
+                <p>Master of Technology</p>
+            </div>
+
+            <div class="card">
+                <h3>MBA</h3>
+                <p>Master of Business Administration</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faculty">
+        <h2>Faculty Profiles</h2>
+        <div class="container">
+            <div class="card">
+                <h3>Dr. ABC</h3>
+                <p>Professor - Computer Science</p>
+            </div>
+
+            <div class="card">
+                <h3>Dr. XYZ</h3>
+                <p>Professor - Electronics</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="admissions">
+        <h2>Admission Procedure</h2>
+        <div class="card">
+            <p>Step 1: Check eligibility criteria.</p>
+            <p>Step 2: Fill out the application form.</p>
+            <p>Step 3: Submit the required documents.</p>
+            <p>Step 4: Complete the admission process.</p>
+        </div>
+    </section>
+
+    <section id="facilities">
+        <h2>Campus Facilities</h2>
+
+        <div class="container">
+            <div class="card">
+                <h3>Library</h3>
+                <p>Books and learning resources.</p>
+            </div>
+
+            <div class="card">
+                <h3>Computer Labs</h3>
+                <p>Computers for practical learning.</p>
+            </div>
+
+            <div class="card">
+                <h3>Sports</h3>
+                <p>Sports and physical activities.</p>
+            </div>
+
+            <div class="card">
+                <h3>Hostel</h3>
+                <p>Accommodation for students.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="events">
+        <h2>College Events</h2>
+        <div class="container">
+            <div class="card">
+                <h3>Technical Fest</h3>
+                <p>Technical competitions and activities.</p>
+            </div>
+
+            <div class="card">
+                <h3>Cultural Fest</h3>
+                <p>Music, dance, and cultural programs.</p>
+            </div>
+
+            <div class="card">
+                <h3>Sports Day</h3>
+                <p>Sports competitions and activities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+        <p>Phone: 9876543210</p>
+        <p>Address: Andhra Pradesh, India</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 DR.RVR NRI UNIVERSITY</p>
+    </footer>
+
+</body>
+</html>
